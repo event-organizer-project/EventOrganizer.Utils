@@ -1,0 +1,13 @@
+name: dev
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  build:
+    name: Build
+    uses: event-organizer-project/event-organizer-infrastructure/.github/workflows/dotnet_build.yml@master
